@@ -1,0 +1,313 @@
+/* GLOBAL SETTINGS */
+:root {
+	--principal: crimson;
+	--emphasis: lightcoral;
+	scroll-behavior: smooth;
+
+	.emphasis {
+		color: var(--emphasis);
+	}
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+	color: white;
+	cursor: default;
+
+	.bold {
+		font-weight: bold;
+	}
+}
+body {
+	position: relative;
+	background: #111;
+	scroll-behavior: smooth;
+	padding-bottom: 100px;
+
+	:is(#about, #technologies, #experience, #projects, #education) {
+		padding-top: 100px;
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+}
+
+/* NAVBAR */
+#nav {
+	position: fixed;
+	background: var(--principal);
+	z-index: 1;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.nav-btn {
+		height: 100%;
+		padding: 0 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.25s ease;
+	}
+	.nav-btn:hover {
+		background: var(--emphasis);
+	}
+}
+.responsive-nav {
+	display: none;
+}
+/* ABOUT */
+#about {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.name {
+		font-size: 3rem;
+	}
+	.job {
+		color: var(--emphasis);
+		font-size: 2rem;
+	}
+	.contact {
+		padding: 20px 0;
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+	}
+	.contact-icon {
+		width: 30px;
+		border-radius: 50px;
+		cursor: pointer;
+		transition: all 0.25s ease;
+	}
+	.contact-icon:hover {
+		scale: 1.25;
+	}
+}
+/* TECHNOLOGIES */
+#technologies {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.technologies-container {
+		padding-top: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.technologies-item {
+		font-family: "Times New Roman", Times, serif;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		transition: all 0.25s ease;
+	}
+	.technologies-item:hover {
+		transform: translate(0px, -8px);
+	}
+	.item-img {
+		width: 60px;
+		border-radius: 10px;
+	}
+}
+/* EXPERIENCE */
+#experience {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.timeline-container {
+		margin-top: 30px;
+		margin-left: 30px;
+		border-left: 2px solid white;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+	.work {
+		position: relative;
+		padding-left: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		transition: all 0.25s ease;
+	}
+	.work::before {
+		position: absolute;
+		content: "";
+		top: -4px;
+		left: -16px;
+		width: 30px;
+		height: 30px;
+		background: white;
+		border-radius: 50%;
+		transition: all 0.25s ease;
+	}
+	.work:hover::before {
+		scale: 1.5;
+		background: var(--emphasis);
+	}
+	.enterprise {
+		color: var(--emphasis);
+		font-weight: bold;
+	}
+	.role {
+		color: var(--emphasis);
+		font-weight: bold;
+	}
+	.stack {
+		color: lightgreen;
+		font-family: "Times New Roman", Times, serif;
+	}
+}
+/* PROJECTS */
+#projects {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+
+	.projects-container {
+		padding-top: 20px;
+	}
+}
+/* EDUCATION */
+#education {
+	width: 100%;
+	padding-bottom: 100px;
+
+	.education-container {
+		width: 100%;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 20px;
+	}
+	.higher-studies-container {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.certifications-container {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.education-item {
+		min-width: 260px;
+		height: 160px;
+		background: #222;
+		padding: 0 10%;
+		border-radius: 10px;
+		text-align: initial;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 20px;
+		transition: all 0.25s ease;
+		overflow: hidden;
+	}
+	.education-item:hover {
+		background: #333;
+	}
+	.education-img {
+		width: 60px;
+		height: 60px;
+		border-radius: 10px;
+	}
+	.education-description {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+	.institute {
+		color: var(--emphasis);
+		font-weight: bold;
+	}
+	.degree {
+		font-weight: bold;
+	}
+	.status {
+		color: lightgreen;
+	}
+}
+/* RESPONSIVE */
+@media (width <= 600px) {
+	#nav {
+		display: none;
+	}
+	.responsive-nav {
+		z-index: 10;
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		width: 50px;
+		height: 50px;
+		background: var(--principal);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+
+		.responsive-nav-btn {
+			display: none;
+		}
+	}
+	.responsive-nav:hover {
+		width: 200px;
+		height: 300px;
+
+		.toggle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+		.responsive-nav-btn {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			cursor: pointer;
+			border-radius: 10px;
+			transition: all 0.25s ease;
+		}
+		.responsive-nav-btn:hover {
+			background: var(--emphasis);
+		}
+	}
+
+	body {
+		:is(#about, #technologies, #experience, #projects, #education) {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+	}
+	#education {
+		.education-container {
+			flex-direction: column;
+		}
+	}
+}
