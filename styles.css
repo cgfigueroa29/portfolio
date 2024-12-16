@@ -243,10 +243,10 @@ body {
 		font-weight: bold;
 	}
 	.degree {
-		font-weight: bold;
 	}
 	.status {
 		color: lightgreen;
+		font-family: 'Times New Roman', Times, serif;
 	}
 }
 /* RESPONSIVE */
@@ -298,7 +298,6 @@ body {
 			background: var(--emphasis);
 		}
 	}
-
 	body {
 		:is(#about, #technologies, #experience, #projects, #education) {
 			padding-left: 10%;
