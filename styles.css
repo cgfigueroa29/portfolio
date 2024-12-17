@@ -32,7 +32,6 @@ body {
 		padding-right: 20%;
 	}
 }
-
 /* NAVBAR */
 #nav {
 	position: fixed;
@@ -246,8 +245,6 @@ body {
 	.institute {
 		color: var(--emphasis);
 		font-weight: bold;
-	}
-	.degree {
 	}
 	.status {
 		color: lightgreen;
