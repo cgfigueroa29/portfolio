@@ -81,6 +81,11 @@ body {
 		flex-direction: row;
 		gap: 10px;
 	}
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.contact-icon {
 		width: 30px;
 		border-radius: 50px;
