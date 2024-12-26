@@ -30,7 +30,6 @@ h3 {
 	text-align: center;
 }
 .content {
-	min-width: 500px;
 	padding-bottom: 40px;
 	padding-top: 40px;
 	padding-left: 15%;
@@ -231,27 +230,25 @@ h3 {
 		flex-wrap: wrap;
 	}
 	:is(.higher-studies-container, .certifications-container) {
-		max-width: 300px;
+		width: 100%;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
 		min-width: 280px;
+
 	}
 	.education-item {
-		width: 100%;
-		height: 180px;
+		width: 80%;
 		background: #2a333c;
-		padding: 0 10%;
+		padding: 20px;
 		border-radius: 20px;
-		text-align: initial;
+
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 10px;
-		transition: all 0.25s ease;
-		overflow: hidden;
+		gap: 20px;
 	}
 	.education-img {
 		width: 60px;
@@ -262,6 +259,7 @@ h3 {
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
+		text-align: left;
 	}
 	.institute {
 		font-family: 'Times New Roman', Times, serif;
@@ -307,7 +305,7 @@ h3 {
 		width: 200px;
 		height: 300px;
 		background: var(--principal);
-		border: 1px #bbbcbd solid;
+		border: 1px #2a333c solid;
 		.toggle {
 			display: flex;
 			justify-content: center;
