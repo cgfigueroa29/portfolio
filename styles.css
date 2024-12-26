@@ -4,10 +4,6 @@
 	--emphasis1: #6baceb;
 	--emphasis2: #37c889;
 	scroll-behavior: smooth;
-
-	.emphasis {
-		color: var(--emphasis1);
-	}
 }
 * {
 	margin: 0;
@@ -16,24 +12,12 @@
 	font-family: "Open Sans", sans-serif;
 	color: white;
 	cursor: default;
-
-	.bold {
-		font-weight: bold;
-	}
 }
 body {
-	position: relative;
 	background: black;
-	scroll-behavior: smooth;
-}
-h3 {
-	text-align: center;
 }
 .content {
-	padding-bottom: 40px;
-	padding-top: 40px;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding: 40px 20%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -41,34 +25,35 @@ h3 {
 	gap: 40px;
 
 	:is(#about, #technologies, #experience, #projects, #education) {
+		width: 100%;
 		background: var(--principal);
 		padding: 40px;
 		border-radius: 20px;
 		scroll-margin-top: 100px;
+		border: 2px #2a333c solid;
+
+		h3 {
+			text-align: center;
+		}
 	}
-}
-.align {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 10px;
 }
 /* NAVBAR */
 #nav {
-	position: sticky;
 	background: var(--principal);
-	z-index: 1;
+	position: sticky;
 	top: 0;
+	z-index: 1;
 	width: 100%;
 	height: 60px;
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
+	gap: 40px;
 	align-items: center;
 
 	.nav-btn {
 		color: #bbbcbd;
 		height: 100%;
-		padding: 0 20px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -79,42 +64,39 @@ h3 {
 		color: white;
 	}
 }
-.responsive-nav {
+#responsive-nav {
 	display: none;
 }
 /* ABOUT */
 #about {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
+	text-align: center;
+	gap: 10px;
 
 	.name {
 		font-size: 3rem;
 		background: linear-gradient(90deg, var(--emphasis1), var(--emphasis2));
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
-		text-align: center;
 	}
 	.job {
 		color: var(--emphasis1);
 		font-size: 2rem;
-		text-align: center;
+	}
+	.email {
+		font-size: 0.75rem;
 	}
 	.contact {
-		padding: 20px 0;
+		padding: 10px 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		gap: 10px;
 	}
-	a {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
 	.contact-icon {
-		width: 30px;
-		border-radius: 50px;
+		width: 40px;
+		border-radius: 50%;
 		cursor: pointer;
 		transition: all 0.25s ease;
 	}
@@ -127,12 +109,11 @@ h3 {
 }
 /* TECHNOLOGIES */
 #technologies {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
+	gap: 20px;
 
 	.technologies-container {
-		padding-top: 20px;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -155,17 +136,15 @@ h3 {
 }
 /* EXPERIENCE */
 #experience {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
+	gap: 20px;
 
 	.timeline-container {
-		margin-top: 30px;
-		margin-left: 30px;
 		border-left: 2px solid white;
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
+		gap: 60px;
 	}
 	.work {
 		position: relative;
@@ -174,6 +153,13 @@ h3 {
 		flex-direction: column;
 		gap: 10px;
 		transition: all 0.25s ease;
+
+		.align {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 10px;
+		}
 	}
 	.work::before {
 		position: absolute;
@@ -188,46 +174,36 @@ h3 {
 	}
 	.work:hover::before {
 		scale: 1.5;
+		background: var(--emphasis1);
 	}
-	.enterprise {
-		color: var(--emphasis1);
-		font-weight: bold;
-	}
-	.role {
+	:is(.enterprise, .role) {
 		color: var(--emphasis1);
 		font-weight: bold;
 	}
 	.stack {
-		color: #37c898;
+		color: var(--emphasis2);
 		font-family: "Times New Roman", Times, serif;
 	}
 }
 /* PROJECTS */
 #projects {
-	width: 100%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
-
-	.projects-container {
-		padding-top: 20px;
-	}
+	gap: 20px;
 }
 /* EDUCATION */
 #education {
-	width: 100%;
-	padding-bottom: 100px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 
-	.education-container {
+	.edu-container {
 		width: 100%;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: center;
 		gap: 20px;
-		flex-wrap: wrap;
 	}
 	:is(.higher-studies-container, .certifications-container) {
 		width: 100%;
@@ -236,44 +212,41 @@ h3 {
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
-		min-width: 280px;
-
 	}
-	.education-item {
-		width: 100%;
+	.edu-item {
 		background: #2a333c;
+		width: 100%;
 		padding: 20px;
 		border-radius: 20px;
-
+		height: 100%;
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 		align-items: center;
 		gap: 20px;
 	}
-	.education-img {
-		width: 10%;
-		border-radius: 20px;
+	.edu-img {
+		width: 60px;
+		border-radius: 40%;
 	}
-	.education-description {
+	.edu-description {
+		width: 100%;
+		text-align: left;
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
-		text-align: left;
 	}
 	.institute {
-		font-family: 'Times New Roman', Times, serif;
-	
 		color: var(--emphasis1);
 		font-weight: bold;
 	}
-	.status {
-		color: var(--emphasis2);
-		font-family: "Times New Roman", Times, serif;
-	}
 	.degree {
-		font-family: 'Times New Roman', Times, serif;
-
+		font-family: "Times New Roman", Times, serif;
 		color: white;
+	}
+	.status {
+		font-family: "Times New Roman", Times, serif;
+		color: var(--emphasis2);
 	}
 }
 /* RESPONSIVE */
@@ -281,8 +254,8 @@ h3 {
 	#nav {
 		display: none;
 	}
-	.responsive-nav {
-		z-index: 10;
+	#responsive-nav {
+		z-index: 2;
 		position: fixed;
 		top: 10px;
 		left: 10px;
@@ -300,11 +273,11 @@ h3 {
 			color: #bbbcbd;
 		}
 	}
-	.responsive-nav:hover {
+	#responsive-nav:hover {
 		width: 200px;
 		height: 300px;
 		background: var(--principal);
-		border: 1px #2a333c solid;
+		border: 2px #2a333c solid;
 		.toggle {
 			display: flex;
 			justify-content: center;
@@ -327,15 +300,17 @@ h3 {
 		}
 	}
 	.content {
-		padding-bottom: 40px;
-		padding-top: 40px;
-		padding-left: 40px;
-		padding-right: 40px;
+		padding: 10px;
+		gap: 10px;
+	}
+}
+@media (width <= 400px) {
+	#education {
+		.edu-item {
+			flex-direction: column;
 
-		#education {
-			.education-container {
-				flex-direction: column;
-				align-items: center;
+			.edu-description {
+				text-align: center;
 			}
 		}
 	}
