@@ -240,7 +240,7 @@ h3 {
 
 	}
 	.education-item {
-		width: 80%;
+		width: 100%;
 		background: #2a333c;
 		padding: 20px;
 		border-radius: 20px;
@@ -251,8 +251,7 @@ h3 {
 		gap: 20px;
 	}
 	.education-img {
-		width: 60px;
-		height: 60px;
+		width: 10%;
 		border-radius: 20px;
 	}
 	.education-description {
