@@ -215,7 +215,7 @@ body {
 	}
 	.edu-item {
 		background: #2a333c;
-		width: 100%;
+		width: 70%;
 		padding: 20px;
 		border-radius: 20px;
 		height: 100%;
@@ -302,6 +302,15 @@ body {
 	.content {
 		padding: 10px;
 		gap: 10px;
+
+		:is(#about, #technologies, #experience, #projects, #education) {
+			scroll-margin-top: 10px;
+		}
+	}
+	#education {
+		.edu-item {
+			width: 100%;
+		}
 	}
 }
 @media (width <= 400px) {
